@@ -7,6 +7,7 @@
 #include <backends/imgui_impl_opengl3.h>
 
 #include "core/common/Logger.hpp"
+#include "ui/AppTheme.hpp"
 #include "ui/MainWindow.hpp"
 
 namespace {
@@ -54,8 +55,10 @@ int main() {
     ImGuiIO& io = ImGui::GetIO();
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
     io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
-
-    ImGui::StyleColorsLight();
+    float xscale = 1.0F;
+    float yscale = 1.0F;
+    glfwGetWindowContentScale(window, &xscale, &yscale);
+    const auto theme = sqlgui::ui::apply_app_theme(io, (xscale + yscale) * 0.5F);
 
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init(glsl_version);
@@ -77,7 +80,7 @@ int main() {
         int display_height = 0;
         glfwGetFramebufferSize(window, &display_width, &display_height);
         glViewport(0, 0, display_width, display_height);
-        glClearColor(0.94F, 0.94F, 0.93F, 1.0F);
+        glClearColor(theme.clear_color.x, theme.clear_color.y, theme.clear_color.z, theme.clear_color.w);
         glClear(GL_COLOR_BUFFER_BIT);
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
         glfwSwapBuffers(window);

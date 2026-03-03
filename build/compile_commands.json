@@ -97,6 +97,12 @@
 },
 {
   "directory": "/Users/ikovic/Documents/sqlgui/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -DIMGUI_ENABLE_DOCKING -DSPDLOG_COMPILED_LIB -DSQLGUI_HAS_POSTGRES=0 -I/Users/ikovic/Documents/sqlgui -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/nlohmann_json-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-src/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -o CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.o -c /Users/ikovic/Documents/sqlgui/ui/AppTheme.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/ui/AppTheme.cpp",
+  "output": "CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build",
   "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -DIMGUI_ENABLE_DOCKING -DSPDLOG_COMPILED_LIB -DSQLGUI_HAS_POSTGRES=0 -I/Users/ikovic/Documents/sqlgui -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/nlohmann_json-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-src/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -o CMakeFiles/sqlgui.dir/ui/QueryEditorPane.cpp.o -c /Users/ikovic/Documents/sqlgui/ui/QueryEditorPane.cpp",
   "file": "/Users/ikovic/Documents/sqlgui/ui/QueryEditorPane.cpp",
   "output": "CMakeFiles/sqlgui.dir/ui/QueryEditorPane.cpp.o"

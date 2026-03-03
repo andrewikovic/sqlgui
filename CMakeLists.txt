@@ -92,6 +92,7 @@ add_executable(
     core/schema/SQLiteSchemaProvider.cpp
     core/schema/PostgresSchemaProvider.cpp
     core/async/QueryExecutionService.cpp
+    ui/AppTheme.cpp
     ui/QueryEditorPane.cpp
     ui/SchemaExplorerPanel.cpp
     ui/ResultGridPanel.cpp

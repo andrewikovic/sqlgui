@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/ikovic/Documents/sqlgui/core/database/SQLiteDatabase.cpp" "CMakeFiles/sqlgui.dir/core/database/SQLiteDatabase.cpp.o" "gcc" "CMakeFiles/sqlgui.dir/core/database/SQLiteDatabase.cpp.o.d"
   "/Users/ikovic/Documents/sqlgui/core/schema/PostgresSchemaProvider.cpp" "CMakeFiles/sqlgui.dir/core/schema/PostgresSchemaProvider.cpp.o" "gcc" "CMakeFiles/sqlgui.dir/core/schema/PostgresSchemaProvider.cpp.o.d"
   "/Users/ikovic/Documents/sqlgui/core/schema/SQLiteSchemaProvider.cpp" "CMakeFiles/sqlgui.dir/core/schema/SQLiteSchemaProvider.cpp.o" "gcc" "CMakeFiles/sqlgui.dir/core/schema/SQLiteSchemaProvider.cpp.o.d"
+  "/Users/ikovic/Documents/sqlgui/ui/AppTheme.cpp" "CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.o" "gcc" "CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.o.d"
   "/Users/ikovic/Documents/sqlgui/ui/MainWindow.cpp" "CMakeFiles/sqlgui.dir/ui/MainWindow.cpp.o" "gcc" "CMakeFiles/sqlgui.dir/ui/MainWindow.cpp.o.d"
   "/Users/ikovic/Documents/sqlgui/ui/QueryEditorPane.cpp" "CMakeFiles/sqlgui.dir/ui/QueryEditorPane.cpp.o" "gcc" "CMakeFiles/sqlgui.dir/ui/QueryEditorPane.cpp.o.d"
   "/Users/ikovic/Documents/sqlgui/ui/ResultGridPanel.cpp" "CMakeFiles/sqlgui.dir/ui/ResultGridPanel.cpp.o" "gcc" "CMakeFiles/sqlgui.dir/ui/ResultGridPanel.cpp.o.d"

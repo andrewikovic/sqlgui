@@ -184,10 +184,24 @@ CMakeFiles/sqlgui.dir/core/async/QueryExecutionService.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sqlgui.dir/core/async/QueryExecutionService.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ikovic/Documents/sqlgui/core/async/QueryExecutionService.cpp -o CMakeFiles/sqlgui.dir/core/async/QueryExecutionService.cpp.s
 
+CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.o: CMakeFiles/sqlgui.dir/flags.make
+CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.o: /Users/ikovic/Documents/sqlgui/ui/AppTheme.cpp
+CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.o: CMakeFiles/sqlgui.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ikovic/Documents/sqlgui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.o -MF CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.o.d -o CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.o -c /Users/ikovic/Documents/sqlgui/ui/AppTheme.cpp
+
+CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ikovic/Documents/sqlgui/ui/AppTheme.cpp > CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.i
+
+CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ikovic/Documents/sqlgui/ui/AppTheme.cpp -o CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.s
+
 CMakeFiles/sqlgui.dir/ui/QueryEditorPane.cpp.o: CMakeFiles/sqlgui.dir/flags.make
 CMakeFiles/sqlgui.dir/ui/QueryEditorPane.cpp.o: /Users/ikovic/Documents/sqlgui/ui/QueryEditorPane.cpp
 CMakeFiles/sqlgui.dir/ui/QueryEditorPane.cpp.o: CMakeFiles/sqlgui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ikovic/Documents/sqlgui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/sqlgui.dir/ui/QueryEditorPane.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ikovic/Documents/sqlgui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/sqlgui.dir/ui/QueryEditorPane.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sqlgui.dir/ui/QueryEditorPane.cpp.o -MF CMakeFiles/sqlgui.dir/ui/QueryEditorPane.cpp.o.d -o CMakeFiles/sqlgui.dir/ui/QueryEditorPane.cpp.o -c /Users/ikovic/Documents/sqlgui/ui/QueryEditorPane.cpp
 
 CMakeFiles/sqlgui.dir/ui/QueryEditorPane.cpp.i: cmake_force
@@ -201,7 +215,7 @@ CMakeFiles/sqlgui.dir/ui/QueryEditorPane.cpp.s: cmake_force
 CMakeFiles/sqlgui.dir/ui/SchemaExplorerPanel.cpp.o: CMakeFiles/sqlgui.dir/flags.make
 CMakeFiles/sqlgui.dir/ui/SchemaExplorerPanel.cpp.o: /Users/ikovic/Documents/sqlgui/ui/SchemaExplorerPanel.cpp
 CMakeFiles/sqlgui.dir/ui/SchemaExplorerPanel.cpp.o: CMakeFiles/sqlgui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ikovic/Documents/sqlgui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/sqlgui.dir/ui/SchemaExplorerPanel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ikovic/Documents/sqlgui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/sqlgui.dir/ui/SchemaExplorerPanel.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sqlgui.dir/ui/SchemaExplorerPanel.cpp.o -MF CMakeFiles/sqlgui.dir/ui/SchemaExplorerPanel.cpp.o.d -o CMakeFiles/sqlgui.dir/ui/SchemaExplorerPanel.cpp.o -c /Users/ikovic/Documents/sqlgui/ui/SchemaExplorerPanel.cpp
 
 CMakeFiles/sqlgui.dir/ui/SchemaExplorerPanel.cpp.i: cmake_force
@@ -215,7 +229,7 @@ CMakeFiles/sqlgui.dir/ui/SchemaExplorerPanel.cpp.s: cmake_force
 CMakeFiles/sqlgui.dir/ui/ResultGridPanel.cpp.o: CMakeFiles/sqlgui.dir/flags.make
 CMakeFiles/sqlgui.dir/ui/ResultGridPanel.cpp.o: /Users/ikovic/Documents/sqlgui/ui/ResultGridPanel.cpp
 CMakeFiles/sqlgui.dir/ui/ResultGridPanel.cpp.o: CMakeFiles/sqlgui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ikovic/Documents/sqlgui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/sqlgui.dir/ui/ResultGridPanel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ikovic/Documents/sqlgui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/sqlgui.dir/ui/ResultGridPanel.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sqlgui.dir/ui/ResultGridPanel.cpp.o -MF CMakeFiles/sqlgui.dir/ui/ResultGridPanel.cpp.o.d -o CMakeFiles/sqlgui.dir/ui/ResultGridPanel.cpp.o -c /Users/ikovic/Documents/sqlgui/ui/ResultGridPanel.cpp
 
 CMakeFiles/sqlgui.dir/ui/ResultGridPanel.cpp.i: cmake_force
@@ -229,7 +243,7 @@ CMakeFiles/sqlgui.dir/ui/ResultGridPanel.cpp.s: cmake_force
 CMakeFiles/sqlgui.dir/ui/MainWindow.cpp.o: CMakeFiles/sqlgui.dir/flags.make
 CMakeFiles/sqlgui.dir/ui/MainWindow.cpp.o: /Users/ikovic/Documents/sqlgui/ui/MainWindow.cpp
 CMakeFiles/sqlgui.dir/ui/MainWindow.cpp.o: CMakeFiles/sqlgui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ikovic/Documents/sqlgui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/sqlgui.dir/ui/MainWindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ikovic/Documents/sqlgui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/sqlgui.dir/ui/MainWindow.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sqlgui.dir/ui/MainWindow.cpp.o -MF CMakeFiles/sqlgui.dir/ui/MainWindow.cpp.o.d -o CMakeFiles/sqlgui.dir/ui/MainWindow.cpp.o -c /Users/ikovic/Documents/sqlgui/ui/MainWindow.cpp
 
 CMakeFiles/sqlgui.dir/ui/MainWindow.cpp.i: cmake_force
@@ -250,6 +264,7 @@ sqlgui_OBJECTS = \
 "CMakeFiles/sqlgui.dir/core/schema/SQLiteSchemaProvider.cpp.o" \
 "CMakeFiles/sqlgui.dir/core/schema/PostgresSchemaProvider.cpp.o" \
 "CMakeFiles/sqlgui.dir/core/async/QueryExecutionService.cpp.o" \
+"CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.o" \
 "CMakeFiles/sqlgui.dir/ui/QueryEditorPane.cpp.o" \
 "CMakeFiles/sqlgui.dir/ui/SchemaExplorerPanel.cpp.o" \
 "CMakeFiles/sqlgui.dir/ui/ResultGridPanel.cpp.o" \
@@ -266,6 +281,7 @@ sqlgui: CMakeFiles/sqlgui.dir/core/database/PostgresDatabase.cpp.o
 sqlgui: CMakeFiles/sqlgui.dir/core/schema/SQLiteSchemaProvider.cpp.o
 sqlgui: CMakeFiles/sqlgui.dir/core/schema/PostgresSchemaProvider.cpp.o
 sqlgui: CMakeFiles/sqlgui.dir/core/async/QueryExecutionService.cpp.o
+sqlgui: CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.o
 sqlgui: CMakeFiles/sqlgui.dir/ui/QueryEditorPane.cpp.o
 sqlgui: CMakeFiles/sqlgui.dir/ui/SchemaExplorerPanel.cpp.o
 sqlgui: CMakeFiles/sqlgui.dir/ui/ResultGridPanel.cpp.o
@@ -277,7 +293,7 @@ sqlgui: _deps/spdlog-build/libspdlog.a
 sqlgui: _deps/glfw-build/src/libglfw3.a
 sqlgui: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework
 sqlgui: CMakeFiles/sqlgui.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/ikovic/Documents/sqlgui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable sqlgui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/ikovic/Documents/sqlgui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable sqlgui"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sqlgui.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

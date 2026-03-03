@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/sqlgui.dir/core/schema/PostgresSchemaProvider.cpp.o.d"
   "CMakeFiles/sqlgui.dir/core/schema/SQLiteSchemaProvider.cpp.o"
   "CMakeFiles/sqlgui.dir/core/schema/SQLiteSchemaProvider.cpp.o.d"
+  "CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.o"
+  "CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.o.d"
   "CMakeFiles/sqlgui.dir/ui/MainWindow.cpp.o"
   "CMakeFiles/sqlgui.dir/ui/MainWindow.cpp.o.d"
   "CMakeFiles/sqlgui.dir/ui/QueryEditorPane.cpp.o"

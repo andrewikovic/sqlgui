@@ -643,6 +643,30 @@ core/schema/SQLiteSchemaProvider.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sqlgui.dir/build.make CMakeFiles/sqlgui.dir/core/schema/SQLiteSchemaProvider.cpp.s
 .PHONY : core/schema/SQLiteSchemaProvider.cpp.s
 
+ui/AppTheme.o: ui/AppTheme.cpp.o
+.PHONY : ui/AppTheme.o
+
+# target to build an object file
+ui/AppTheme.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sqlgui.dir/build.make CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.o
+.PHONY : ui/AppTheme.cpp.o
+
+ui/AppTheme.i: ui/AppTheme.cpp.i
+.PHONY : ui/AppTheme.i
+
+# target to preprocess a source file
+ui/AppTheme.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sqlgui.dir/build.make CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.i
+.PHONY : ui/AppTheme.cpp.i
+
+ui/AppTheme.s: ui/AppTheme.cpp.s
+.PHONY : ui/AppTheme.s
+
+# target to generate assembly for a file
+ui/AppTheme.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sqlgui.dir/build.make CMakeFiles/sqlgui.dir/ui/AppTheme.cpp.s
+.PHONY : ui/AppTheme.cpp.s
+
 ui/MainWindow.o: ui/MainWindow.cpp.o
 .PHONY : ui/MainWindow.o
 
@@ -807,6 +831,9 @@ help:
 	@echo "... core/schema/SQLiteSchemaProvider.o"
 	@echo "... core/schema/SQLiteSchemaProvider.i"
 	@echo "... core/schema/SQLiteSchemaProvider.s"
+	@echo "... ui/AppTheme.o"
+	@echo "... ui/AppTheme.i"
+	@echo "... ui/AppTheme.s"
 	@echo "... ui/MainWindow.o"
 	@echo "... ui/MainWindow.i"
 	@echo "... ui/MainWindow.s"
