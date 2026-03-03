@@ -139,9 +139,21 @@ void apply_palette(ImGuiStyle& style) {
 ThemeResources apply_app_theme(ImGuiIO& io, float dpi_scale) {
     io.Fonts->Clear();
 
+    // Sanitize DPI scale to prevent invalid or zero values.
+    // If dpi_scale <= 0, default to 1.0 (no scaling).
     const float safe_scale = dpi_scale > 0.0F ? dpi_scale : 1.0F;
-    const float body_size = 17.0F * safe_scale;
-    const float mono_size = 15.5F * safe_scale;
+
+
+    // Apply a very subtle font scaling when DPI > 1.0.
+    // Only 8% of the extra DPI scaling is applied, capped at +8% total.
+    // This keeps fonts from becoming excessively large on high-DPI displays.
+    const float subtle_scale = safe_scale > 1.0F
+        ? std::min(1.08F, 1.0F + ((safe_scale - 1.0F) * 0.08F))
+        : 1.0F;
+
+    // Compute final font sizes using the restrained scaling factor.
+    const float body_size = 16.0F * subtle_scale;
+    const float mono_size = 14.5F * subtle_scale;
 
     ImFont* body_font = load_first_available_font(
         io,
@@ -183,7 +195,7 @@ ThemeResources apply_app_theme(ImGuiIO& io, float dpi_scale) {
     ImGuiStyle& style = ImGui::GetStyle();
     style = ImGuiStyle {};
     apply_palette(style);
-    style.ScaleAllSizes(safe_scale);
+    style.ScaleAllSizes(subtle_scale);
 
     return ThemeResources {
         .clear_color = rgba(0.93F, 0.92F, 0.88F, 1.0F),

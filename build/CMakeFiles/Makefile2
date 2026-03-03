@@ -252,9 +252,9 @@ CMakeFiles/imgui_docking.dir/clean:
 # Target rules for target CMakeFiles/sqlgui.dir
 
 # All Build rule for target.
-CMakeFiles/sqlgui.dir/all: CMakeFiles/imgui_docking.dir/all
 CMakeFiles/sqlgui.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 CMakeFiles/sqlgui.dir/all: _deps/spdlog-build/CMakeFiles/spdlog.dir/all
+CMakeFiles/sqlgui.dir/all: CMakeFiles/imgui_docking.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sqlgui.dir/build.make CMakeFiles/sqlgui.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sqlgui.dir/build.make CMakeFiles/sqlgui.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ikovic/Documents/sqlgui/build/CMakeFiles --progress-num=40,41,42,43,44,45,46,47,48,49,50,51,52,53 "Built target sqlgui"
