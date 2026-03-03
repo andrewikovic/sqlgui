@@ -12,6 +12,7 @@ QueryEditorPane::QueryEditorPane()
     : buffer_("SELECT name\nFROM sqlite_master\nORDER BY name;") {}
 
 QueryEditorAction QueryEditorPane::render(
+    ImFont* mono_font,
     bool query_running,
     std::chrono::milliseconds last_execution_time,
     const std::optional<sqlgui::core::DatabaseError>& last_error,
@@ -66,6 +67,9 @@ QueryEditorAction QueryEditorPane::render(
     }
 
     ImGuiInputTextFlags flags = ImGuiInputTextFlags_AllowTabInput | ImGuiInputTextFlags_CallbackAlways;
+    if (mono_font != nullptr) {
+        ImGui::PushFont(mono_font);
+    }
     ImGui::InputTextMultiline(
         "##query_editor",
         &buffer_,
@@ -73,6 +77,9 @@ QueryEditorAction QueryEditorPane::render(
         flags,
         &QueryEditorPane::input_callback,
         this);
+    if (mono_font != nullptr) {
+        ImGui::PopFont();
+    }
 
     if (last_error.has_value()) {
         ImGui::Separator();

@@ -29,6 +29,7 @@ public:
     QueryEditorPane();
 
     [[nodiscard]] QueryEditorAction render(
+        ImFont* mono_font,
         bool query_running,
         std::chrono::milliseconds last_execution_time,
         const std::optional<sqlgui::core::DatabaseError>& last_error,

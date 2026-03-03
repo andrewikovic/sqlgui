@@ -6,6 +6,8 @@
 #include <string>
 #include <vector>
 
+#include <imgui.h>
+
 #include "core/async/QueryExecutionService.hpp"
 #include "core/common/Error.hpp"
 #include "core/models/ConnectionConfig.hpp"
@@ -27,7 +29,7 @@ namespace sqlgui::ui {
 
 class MainWindow {
 public:
-    explicit MainWindow(std::shared_ptr<spdlog::logger> logger);
+    MainWindow(std::shared_ptr<spdlog::logger> logger, ImFont* mono_font);
 
     void render();
 
@@ -47,6 +49,7 @@ private:
     static void render_plan_node(const sqlgui::core::ExplainNode& node);
 
     std::shared_ptr<spdlog::logger> logger_;
+    ImFont* mono_font_ {nullptr};
     sqlgui::core::QueryExecutionService query_executor_;
     sqlgui::core::ConnectionConfig connection_config_;
     std::shared_ptr<sqlgui::core::Database> database_;

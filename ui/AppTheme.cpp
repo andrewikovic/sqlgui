@@ -1,7 +1,8 @@
 #include "ui/AppTheme.hpp"
 
-#include <array>
+#include <algorithm>
 #include <filesystem>
+#include <initializer_list>
 #include <string_view>
 
 namespace sqlgui::ui {
@@ -173,6 +174,10 @@ ThemeResources apply_app_theme(ImGuiIO& io, float dpi_scale) {
         io,
         mono_size,
         {
+            "assets/fonts/IBMPlexMono-Regular.ttf",
+            "../assets/fonts/IBMPlexMono-Regular.ttf",
+            "../../assets/fonts/IBMPlexMono-Regular.ttf",
+            "/Users/ikovic/Library/Fonts/IBMPlexMono-Regular.otf",
             "/System/Library/Fonts/SFNSMono.ttf",
             "/System/Library/Fonts/Menlo.ttc",
             "/System/Library/Fonts/Monaco.ttf",

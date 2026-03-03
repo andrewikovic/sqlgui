@@ -64,7 +64,7 @@ int main() {
     ImGui_ImplOpenGL3_Init(glsl_version);
 
     sqlgui::core::AppLogger logger;
-    sqlgui::ui::MainWindow main_window(logger.shared());
+    sqlgui::ui::MainWindow main_window(logger.shared(), theme.mono_font);
 
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();

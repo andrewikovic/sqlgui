@@ -7,6 +7,8 @@
 #include <unordered_map>
 #include <vector>
 
+#include <imgui.h>
+
 #include "core/common/Error.hpp"
 #include "core/models/QueryModels.hpp"
 
@@ -19,7 +21,7 @@ public:
         std::unique_ptr<sqlgui::core::QueryCursor> cursor,
         std::chrono::milliseconds execution_time,
         std::uint64_t affected_rows);
-    void render();
+    void render(ImFont* mono_font);
 
 private:
     struct CachedPage {

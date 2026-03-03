@@ -991,6 +991,13 @@ CMakeFiles/sqlgui.dir/ui/MainWindow.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/from_chars_result.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/from_chars_integral.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/to_chars.h \
+  /Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/imgui.h \
+  /Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/imconfig.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/float.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/float.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/float.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
   /Users/ikovic/Documents/sqlgui/core/async/QueryExecutionService.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/future \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/thread.h \
@@ -1007,8 +1014,6 @@ CMakeFiles/sqlgui.dir/ui/MainWindow.cpp.o: \
   /Users/ikovic/Documents/sqlgui/core/common/Expected.hpp \
   /Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-src/include/tl/expected.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
   /Users/ikovic/Documents/sqlgui/core/common/ThreadSafeQueue.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/condition_variable \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/stop_callback.h \
@@ -1037,11 +1042,6 @@ CMakeFiles/sqlgui.dir/ui/MainWindow.cpp.o: \
   /Users/ikovic/Documents/sqlgui/core/schema/SchemaProvider.hpp \
   /Users/ikovic/Documents/sqlgui/core/models/SchemaModels.hpp \
   /Users/ikovic/Documents/sqlgui/ui/QueryEditorPane.hpp \
-  /Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/imgui.h \
-  /Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/imconfig.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/float.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/float.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/float.h \
   /Users/ikovic/Documents/sqlgui/ui/ResultGridPanel.hpp \
   /Users/ikovic/Documents/sqlgui/ui/SchemaExplorerPanel.hpp \
   /Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp/imgui_stdlib.h \

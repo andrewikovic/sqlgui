@@ -31,7 +31,7 @@ void ResultGridPanel::set_result(
     touch_counter_ = 0;
 }
 
-void ResultGridPanel::render() {
+void ResultGridPanel::render(ImFont* mono_font) {
     if (!cursor_) {
         ImGui::Text("Execution time: %lld ms", static_cast<long long>(execution_time_.count()));
         ImGui::Text("Affected rows: %llu", static_cast<unsigned long long>(affected_rows_));
@@ -53,6 +53,9 @@ void ResultGridPanel::render() {
         | ImGuiTableFlags_ScrollY
         | ImGuiTableFlags_Sortable;
 
+    if (mono_font != nullptr) {
+        ImGui::PushFont(mono_font);
+    }
     if (ImGui::BeginTable("result_grid", static_cast<int>(columns.size()), table_flags, ImVec2(-FLT_MIN, -FLT_MIN))) {
         for (std::size_t index = 0; index < columns.size(); ++index) {
             ImGui::TableSetupColumn(
@@ -100,6 +103,9 @@ void ResultGridPanel::render() {
             }
         }
         ImGui::EndTable();
+    }
+    if (mono_font != nullptr) {
+        ImGui::PopFont();
     }
 
     if (page_error_.has_value()) {

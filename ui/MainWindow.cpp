@@ -15,8 +15,9 @@
 
 namespace sqlgui::ui {
 
-MainWindow::MainWindow(std::shared_ptr<spdlog::logger> logger)
+MainWindow::MainWindow(std::shared_ptr<spdlog::logger> logger, ImFont* mono_font)
     : logger_(std::move(logger)),
+      mono_font_(mono_font),
       query_executor_(logger_) {}
 
 void MainWindow::render() {
@@ -118,6 +119,7 @@ void MainWindow::render_schema_window() {
 void MainWindow::render_editor_window() {
     ImGui::Begin("Query Editor");
     const auto action = editor_.render(
+        mono_font_,
         active_query_.has_value(),
         last_execution_time_,
         last_error_,
@@ -141,7 +143,7 @@ void MainWindow::render_editor_window() {
 
 void MainWindow::render_results_window() {
     ImGui::Begin("Results");
-    result_grid_.render();
+    result_grid_.render(mono_font_);
     ImGui::End();
 }
 
