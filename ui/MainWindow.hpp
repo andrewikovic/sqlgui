@@ -34,6 +34,8 @@ public:
     void render();
 
 private:
+    void render_main_menu_bar();
+    void render_status_bar();
     void render_connection_window();
     void render_schema_window();
     void render_editor_window();
@@ -67,6 +69,11 @@ private:
     std::string pending_sql_;
     bool pending_explain_ {false};
     bool dock_layout_initialized_ {false};
+    bool show_connection_window_ {true};
+    bool show_schema_window_ {true};
+    bool show_editor_window_ {true};
+    bool show_results_window_ {true};
+    bool show_plan_window_ {true};
     bool open_dangerous_modal_ {false};
 };
 

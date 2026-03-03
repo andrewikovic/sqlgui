@@ -10491,6 +10491,7 @@ CMakeFiles/sqlgui.dir/ui/MainWindow.cpp.o
  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h
  /Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/imconfig.h
  /Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/imgui.h
+ /Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/imgui_internal.h
  /Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp/imgui_stdlib.h
  /Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include/spdlog/common.h
  /Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include/spdlog/details/backtracer.h

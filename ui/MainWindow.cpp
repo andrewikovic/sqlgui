@@ -24,6 +24,23 @@ constexpr const char* kEditorWindow = "Query Editor";
 constexpr const char* kResultsWindow = "Results";
 constexpr const char* kPlanWindow = "Execution Plan";
 
+[[nodiscard]] const char* yes_no(bool value) {
+    return value ? "On" : "Off";
+}
+
+[[nodiscard]] std::string truncate_status_text(std::string text, std::size_t max_length = 96) {
+    if (text.size() <= max_length) {
+        return text;
+    }
+    return text.substr(0, max_length - 3) + "...";
+}
+
+void status_divider() {
+    ImGui::SameLine();
+    ImGui::TextDisabled("|");
+    ImGui::SameLine();
+}
+
 }  // namespace
 
 MainWindow::MainWindow(std::shared_ptr<spdlog::logger> logger, ImFont* mono_font)
@@ -34,6 +51,9 @@ MainWindow::MainWindow(std::shared_ptr<spdlog::logger> logger, ImFont* mono_font
 void MainWindow::render() {
     poll_query();
 
+    render_main_menu_bar();
+    render_status_bar();
+
     const ImGuiID dockspace_id = ImGui::DockSpaceOverViewport(0, ImGui::GetMainViewport());
     ensure_initial_dock_layout(dockspace_id);
 
@@ -43,6 +63,109 @@ void MainWindow::render() {
     render_results_window();
     render_plan_window();
     render_delete_update_warning();
+}
+
+void MainWindow::render_status_bar() {
+    ImGuiViewport* viewport = ImGui::GetMainViewport();
+    const ImGuiWindowFlags window_flags = ImGuiWindowFlags_NoScrollbar
+        | ImGuiWindowFlags_NoSavedSettings
+        | ImGuiWindowFlags_NoDocking
+        | ImGuiWindowFlags_NoTitleBar
+        | ImGuiWindowFlags_NoNavFocus
+        | ImGuiWindowFlags_NoMove
+        | ImGuiWindowFlags_NoResize;
+
+    constexpr ImVec2 status_bar_padding = ImVec2(12.0F, 4.0F);
+    ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, status_bar_padding);
+
+    const float height = ImGui::GetTextLineHeight() + (status_bar_padding.y * 2.0F);
+    if (!ImGui::BeginViewportSideBar("Status Bar", viewport, ImGuiDir_Down, height, window_flags)) {
+        ImGui::End();
+        ImGui::PopStyleVar();
+        return;
+    }
+
+    const std::string connection_label = database_ != nullptr
+        ? ("Connected: " + connection_config_.name + " (" + database_kind_label(connection_config_.kind) + ")")
+        : "Connected: No active database";
+    ImGui::TextUnformatted(connection_label.c_str());
+
+    status_divider();
+    ImGui::Text("Autocommit: %s", database_ != nullptr ? yes_no(database_->autocommit()) : "n/a");
+
+    status_divider();
+    if (active_query_.has_value()) {
+        ImGui::TextColored(
+            ImVec4(0.10F, 0.50F, 0.49F, 1.0F),
+            "Query: Running #%llu",
+            static_cast<unsigned long long>(active_query_->id));
+    } else {
+        ImGui::TextDisabled("Query: Idle");
+    }
+
+    status_divider();
+    if (last_execution_time_.count() > 0) {
+        ImGui::Text("Last exec: %lld ms", static_cast<long long>(last_execution_time_.count()));
+    } else {
+        ImGui::TextDisabled("Last exec: -");
+    }
+
+    status_divider();
+    if (last_error_.has_value()) {
+        const std::string error_text = "Last error: " + truncate_status_text(last_error_->message);
+        ImGui::TextColored(ImVec4(0.92F, 0.24F, 0.19F, 1.0F), "%s", error_text.c_str());
+    } else {
+        ImGui::TextDisabled("Last error: none");
+    }
+
+    ImGui::End();
+    ImGui::PopStyleVar();
+}
+
+void MainWindow::render_main_menu_bar() {
+    if (!ImGui::BeginMainMenuBar()) {
+        return;
+    }
+
+    if (ImGui::BeginMenu("View")) {
+        ImGui::MenuItem(kConnectionWindow, nullptr, &show_connection_window_);
+        ImGui::MenuItem(kSchemaWindow, nullptr, &show_schema_window_);
+        ImGui::MenuItem(kEditorWindow, nullptr, &show_editor_window_);
+        ImGui::MenuItem(kResultsWindow, nullptr, &show_results_window_);
+        ImGui::MenuItem(kPlanWindow, nullptr, &show_plan_window_);
+        ImGui::EndMenu();
+    }
+
+    if (ImGui::BeginMenu("Actions")) {
+        if (ImGui::MenuItem(database_ != nullptr ? "Reconnect" : "Connect")) {
+            connect();
+        }
+
+        const bool can_run = database_ != nullptr && active_query_ == std::nullopt;
+        if (!can_run) {
+            ImGui::BeginDisabled();
+        }
+        if (ImGui::MenuItem("Run Query")) {
+            submit_query(editor_.text(), false);
+        }
+        if (!can_run) {
+            ImGui::EndDisabled();
+        }
+
+        if (active_query_ == std::nullopt) {
+            ImGui::BeginDisabled();
+        }
+        if (ImGui::MenuItem("Cancel Query")) {
+            (void)query_executor_.cancel(active_query_->id);
+        }
+        if (active_query_ == std::nullopt) {
+            ImGui::EndDisabled();
+        }
+
+        ImGui::EndMenu();
+    }
+
+    ImGui::EndMainMenuBar();
 }
 
 void MainWindow::ensure_initial_dock_layout(ImGuiID dockspace_id) {
@@ -80,7 +203,14 @@ void MainWindow::ensure_initial_dock_layout(ImGuiID dockspace_id) {
 }
 
 void MainWindow::render_connection_window() {
-    ImGui::Begin(kConnectionWindow);
+    if (!show_connection_window_) {
+        return;
+    }
+
+    if (!ImGui::Begin(kConnectionWindow, &show_connection_window_)) {
+        ImGui::End();
+        return;
+    }
 
     int database_kind = connection_config_.kind == sqlgui::core::DatabaseKind::SQLite ? 0 : 1;
     const char* kinds[] = {"SQLite", "PostgreSQL"};
@@ -157,13 +287,27 @@ void MainWindow::render_connection_window() {
 }
 
 void MainWindow::render_schema_window() {
-    ImGui::Begin(kSchemaWindow);
+    if (!show_schema_window_) {
+        return;
+    }
+
+    if (!ImGui::Begin(kSchemaWindow, &show_schema_window_)) {
+        ImGui::End();
+        return;
+    }
     schema_explorer_.render(schema_provider_.get());
     ImGui::End();
 }
 
 void MainWindow::render_editor_window() {
-    ImGui::Begin(kEditorWindow);
+    if (!show_editor_window_) {
+        return;
+    }
+
+    if (!ImGui::Begin(kEditorWindow, &show_editor_window_)) {
+        ImGui::End();
+        return;
+    }
     const auto action = editor_.render(
         mono_font_,
         active_query_.has_value(),
@@ -188,13 +332,27 @@ void MainWindow::render_editor_window() {
 }
 
 void MainWindow::render_results_window() {
-    ImGui::Begin(kResultsWindow);
+    if (!show_results_window_) {
+        return;
+    }
+
+    if (!ImGui::Begin(kResultsWindow, &show_results_window_)) {
+        ImGui::End();
+        return;
+    }
     result_grid_.render(mono_font_);
     ImGui::End();
 }
 
 void MainWindow::render_plan_window() {
-    ImGui::Begin(kPlanWindow);
+    if (!show_plan_window_) {
+        return;
+    }
+
+    if (!ImGui::Begin(kPlanWindow, &show_plan_window_)) {
+        ImGui::End();
+        return;
+    }
     if (!explain_plan_.has_value()) {
         ImGui::TextDisabled("Run EXPLAIN on a PostgreSQL query to render the execution plan.");
     } else {

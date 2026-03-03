@@ -10481,6 +10481,7 @@ CMakeFiles/sqlgui.dir/ui/MainWindow.cpp.o: /Users/ikovic/Documents/sqlgui/ui/Mai
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
   _deps/imgui-src/imconfig.h \
   _deps/imgui-src/imgui.h \
+  _deps/imgui-src/imgui_internal.h \
   _deps/imgui-src/misc/cpp/imgui_stdlib.h \
   _deps/spdlog-src/include/spdlog/common.h \
   _deps/spdlog-src/include/spdlog/details/backtracer.h \
@@ -14384,6 +14385,8 @@ _deps/glfw-src/include/GLFW/glfw3.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/hypot.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/hyperbolic_functions.h:
+
+_deps/imgui-src/imgui_internal.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/pair.h:
 
