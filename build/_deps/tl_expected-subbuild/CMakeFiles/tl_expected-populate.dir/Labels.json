@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-subbuild/CMakeFiles/tl_expected-populate"
+		},
+		{
+			"file" : "/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-subbuild/CMakeFiles/tl_expected-populate.rule"
+		},
+		{
+			"file" : "/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-subbuild/CMakeFiles/tl_expected-populate-complete.rule"
+		},
+		{
+			"file" : "/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-subbuild/tl_expected-populate-prefix/src/tl_expected-populate-stamp/tl_expected-populate-build.rule"
+		},
+		{
+			"file" : "/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-subbuild/tl_expected-populate-prefix/src/tl_expected-populate-stamp/tl_expected-populate-configure.rule"
+		},
+		{
+			"file" : "/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-subbuild/tl_expected-populate-prefix/src/tl_expected-populate-stamp/tl_expected-populate-download.rule"
+		},
+		{
+			"file" : "/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-subbuild/tl_expected-populate-prefix/src/tl_expected-populate-stamp/tl_expected-populate-install.rule"
+		},
+		{
+			"file" : "/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-subbuild/tl_expected-populate-prefix/src/tl_expected-populate-stamp/tl_expected-populate-mkdir.rule"
+		},
+		{
+			"file" : "/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-subbuild/tl_expected-populate-prefix/src/tl_expected-populate-stamp/tl_expected-populate-patch.rule"
+		},
+		{
+			"file" : "/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-subbuild/tl_expected-populate-prefix/src/tl_expected-populate-stamp/tl_expected-populate-test.rule"
+		},
+		{
+			"file" : "/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-subbuild/tl_expected-populate-prefix/src/tl_expected-populate-stamp/tl_expected-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"tl_expected-populate"
+		],
+		"name" : "tl_expected-populate"
+	}
+}

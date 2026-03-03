@@ -1,0 +1,13 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/ikovic/Documents/sqlgui/build/cmake_install.cmake",
+		"/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/cmake_install.cmake",
+		"/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src/cmake_install.cmake",
+		"/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/docs/cmake_install.cmake",
+		"/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-build/cmake_install.cmake",
+		"/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-build/cmake_install.cmake",
+		"/Users/ikovic/Documents/sqlgui/build/_deps/nlohmann_json-build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,290 @@
+[
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build",
+  "command": "/usr/bin/c++  -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/imgui_docking.dir/_deps/imgui-src/imgui.cpp.o -c /Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/imgui.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/imgui.cpp",
+  "output": "CMakeFiles/imgui_docking.dir/_deps/imgui-src/imgui.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build",
+  "command": "/usr/bin/c++  -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/imgui_docking.dir/_deps/imgui-src/imgui_demo.cpp.o -c /Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/imgui_demo.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/imgui_demo.cpp",
+  "output": "CMakeFiles/imgui_docking.dir/_deps/imgui-src/imgui_demo.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build",
+  "command": "/usr/bin/c++  -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/imgui_docking.dir/_deps/imgui-src/imgui_draw.cpp.o -c /Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/imgui_draw.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/imgui_draw.cpp",
+  "output": "CMakeFiles/imgui_docking.dir/_deps/imgui-src/imgui_draw.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build",
+  "command": "/usr/bin/c++  -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/imgui_docking.dir/_deps/imgui-src/imgui_tables.cpp.o -c /Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/imgui_tables.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/imgui_tables.cpp",
+  "output": "CMakeFiles/imgui_docking.dir/_deps/imgui-src/imgui_tables.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build",
+  "command": "/usr/bin/c++  -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/imgui_docking.dir/_deps/imgui-src/imgui_widgets.cpp.o -c /Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/imgui_widgets.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/imgui_widgets.cpp",
+  "output": "CMakeFiles/imgui_docking.dir/_deps/imgui-src/imgui_widgets.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build",
+  "command": "/usr/bin/c++  -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/imgui_docking.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.o -c /Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends/imgui_impl_glfw.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends/imgui_impl_glfw.cpp",
+  "output": "CMakeFiles/imgui_docking.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build",
+  "command": "/usr/bin/c++  -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/imgui_docking.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.o -c /Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends/imgui_impl_opengl3.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends/imgui_impl_opengl3.cpp",
+  "output": "CMakeFiles/imgui_docking.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build",
+  "command": "/usr/bin/c++  -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/imgui_docking.dir/_deps/imgui-src/misc/cpp/imgui_stdlib.cpp.o -c /Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp/imgui_stdlib.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp/imgui_stdlib.cpp",
+  "output": "CMakeFiles/imgui_docking.dir/_deps/imgui-src/misc/cpp/imgui_stdlib.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -DIMGUI_ENABLE_DOCKING -DSPDLOG_COMPILED_LIB -DSQLGUI_HAS_POSTGRES=0 -I/Users/ikovic/Documents/sqlgui -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/nlohmann_json-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-src/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -o CMakeFiles/sqlgui.dir/app/main.cpp.o -c /Users/ikovic/Documents/sqlgui/app/main.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/app/main.cpp",
+  "output": "CMakeFiles/sqlgui.dir/app/main.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -DIMGUI_ENABLE_DOCKING -DSPDLOG_COMPILED_LIB -DSQLGUI_HAS_POSTGRES=0 -I/Users/ikovic/Documents/sqlgui -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/nlohmann_json-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-src/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -o CMakeFiles/sqlgui.dir/core/common/SqlText.cpp.o -c /Users/ikovic/Documents/sqlgui/core/common/SqlText.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/core/common/SqlText.cpp",
+  "output": "CMakeFiles/sqlgui.dir/core/common/SqlText.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -DIMGUI_ENABLE_DOCKING -DSPDLOG_COMPILED_LIB -DSQLGUI_HAS_POSTGRES=0 -I/Users/ikovic/Documents/sqlgui -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/nlohmann_json-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-src/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -o CMakeFiles/sqlgui.dir/core/database/DatabaseFactory.cpp.o -c /Users/ikovic/Documents/sqlgui/core/database/DatabaseFactory.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/core/database/DatabaseFactory.cpp",
+  "output": "CMakeFiles/sqlgui.dir/core/database/DatabaseFactory.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -DIMGUI_ENABLE_DOCKING -DSPDLOG_COMPILED_LIB -DSQLGUI_HAS_POSTGRES=0 -I/Users/ikovic/Documents/sqlgui -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/nlohmann_json-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-src/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -o CMakeFiles/sqlgui.dir/core/database/SQLiteDatabase.cpp.o -c /Users/ikovic/Documents/sqlgui/core/database/SQLiteDatabase.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/core/database/SQLiteDatabase.cpp",
+  "output": "CMakeFiles/sqlgui.dir/core/database/SQLiteDatabase.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -DIMGUI_ENABLE_DOCKING -DSPDLOG_COMPILED_LIB -DSQLGUI_HAS_POSTGRES=0 -I/Users/ikovic/Documents/sqlgui -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/nlohmann_json-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-src/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -o CMakeFiles/sqlgui.dir/core/database/PostgresDatabase.cpp.o -c /Users/ikovic/Documents/sqlgui/core/database/PostgresDatabase.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/core/database/PostgresDatabase.cpp",
+  "output": "CMakeFiles/sqlgui.dir/core/database/PostgresDatabase.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -DIMGUI_ENABLE_DOCKING -DSPDLOG_COMPILED_LIB -DSQLGUI_HAS_POSTGRES=0 -I/Users/ikovic/Documents/sqlgui -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/nlohmann_json-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-src/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -o CMakeFiles/sqlgui.dir/core/schema/SQLiteSchemaProvider.cpp.o -c /Users/ikovic/Documents/sqlgui/core/schema/SQLiteSchemaProvider.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/core/schema/SQLiteSchemaProvider.cpp",
+  "output": "CMakeFiles/sqlgui.dir/core/schema/SQLiteSchemaProvider.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -DIMGUI_ENABLE_DOCKING -DSPDLOG_COMPILED_LIB -DSQLGUI_HAS_POSTGRES=0 -I/Users/ikovic/Documents/sqlgui -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/nlohmann_json-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-src/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -o CMakeFiles/sqlgui.dir/core/schema/PostgresSchemaProvider.cpp.o -c /Users/ikovic/Documents/sqlgui/core/schema/PostgresSchemaProvider.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/core/schema/PostgresSchemaProvider.cpp",
+  "output": "CMakeFiles/sqlgui.dir/core/schema/PostgresSchemaProvider.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -DIMGUI_ENABLE_DOCKING -DSPDLOG_COMPILED_LIB -DSQLGUI_HAS_POSTGRES=0 -I/Users/ikovic/Documents/sqlgui -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/nlohmann_json-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-src/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -o CMakeFiles/sqlgui.dir/core/async/QueryExecutionService.cpp.o -c /Users/ikovic/Documents/sqlgui/core/async/QueryExecutionService.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/core/async/QueryExecutionService.cpp",
+  "output": "CMakeFiles/sqlgui.dir/core/async/QueryExecutionService.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -DIMGUI_ENABLE_DOCKING -DSPDLOG_COMPILED_LIB -DSQLGUI_HAS_POSTGRES=0 -I/Users/ikovic/Documents/sqlgui -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/nlohmann_json-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-src/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -o CMakeFiles/sqlgui.dir/ui/QueryEditorPane.cpp.o -c /Users/ikovic/Documents/sqlgui/ui/QueryEditorPane.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/ui/QueryEditorPane.cpp",
+  "output": "CMakeFiles/sqlgui.dir/ui/QueryEditorPane.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -DIMGUI_ENABLE_DOCKING -DSPDLOG_COMPILED_LIB -DSQLGUI_HAS_POSTGRES=0 -I/Users/ikovic/Documents/sqlgui -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/nlohmann_json-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-src/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -o CMakeFiles/sqlgui.dir/ui/SchemaExplorerPanel.cpp.o -c /Users/ikovic/Documents/sqlgui/ui/SchemaExplorerPanel.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/ui/SchemaExplorerPanel.cpp",
+  "output": "CMakeFiles/sqlgui.dir/ui/SchemaExplorerPanel.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -DIMGUI_ENABLE_DOCKING -DSPDLOG_COMPILED_LIB -DSQLGUI_HAS_POSTGRES=0 -I/Users/ikovic/Documents/sqlgui -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/nlohmann_json-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-src/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -o CMakeFiles/sqlgui.dir/ui/ResultGridPanel.cpp.o -c /Users/ikovic/Documents/sqlgui/ui/ResultGridPanel.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/ui/ResultGridPanel.cpp",
+  "output": "CMakeFiles/sqlgui.dir/ui/ResultGridPanel.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -DIMGUI_ENABLE_DOCKING -DSPDLOG_COMPILED_LIB -DSQLGUI_HAS_POSTGRES=0 -I/Users/ikovic/Documents/sqlgui -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/backends -I/Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/nlohmann_json-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/tl_expected-src/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -o CMakeFiles/sqlgui.dir/ui/MainWindow.cpp.o -c /Users/ikovic/Documents/sqlgui/ui/MainWindow.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/ui/MainWindow.cpp",
+  "output": "CMakeFiles/sqlgui.dir/ui/MainWindow.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/context.c.o -c /Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/context.c",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/context.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/context.c.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/init.c.o -c /Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/init.c",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/init.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/init.c.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/input.c.o -c /Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/input.c",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/input.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/input.c.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/monitor.c.o -c /Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/monitor.c",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/monitor.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/monitor.c.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/platform.c.o -c /Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/platform.c",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/platform.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/platform.c.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/vulkan.c.o -c /Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/vulkan.c",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/vulkan.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/vulkan.c.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/window.c.o -c /Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/window.c",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/window.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/window.c.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/egl_context.c.o -c /Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/egl_context.c",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/egl_context.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/egl_context.c.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/osmesa_context.c.o -c /Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/osmesa_context.c",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/osmesa_context.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/osmesa_context.c.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/null_init.c.o -c /Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/null_init.c",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/null_init.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/null_init.c.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/null_monitor.c.o -c /Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/null_monitor.c",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/null_monitor.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/null_monitor.c.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/null_window.c.o -c /Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/null_window.c",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/null_window.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/null_window.c.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/null_joystick.c.o -c /Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/null_joystick.c",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/null_joystick.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/null_joystick.c.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_time.c.o -c /Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/cocoa_time.c",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/cocoa_time.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_time.c.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/posix_module.c.o -c /Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/posix_module.c",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/posix_module.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/posix_module.c.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/posix_thread.c.o -c /Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/posix_thread.c",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/posix_thread.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/posix_thread.c.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_init.m.o -c /Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/cocoa_init.m",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/cocoa_init.m",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_init.m.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_joystick.m.o -c /Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/cocoa_joystick.m",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/cocoa_joystick.m",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_monitor.m.o -c /Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/cocoa_monitor.m",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/cocoa_monitor.m",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_window.m.o -c /Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/cocoa_window.m",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/cocoa_window.m",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_window.m.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/include -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src -I/Users/ikovic/Documents/sqlgui/build/_deps/glfw-build/src -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/nsgl_context.m.o -c /Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/nsgl_context.m",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/glfw-src/src/nsgl_context.m",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/nsgl_context.m.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-build",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/spdlog.dir/src/spdlog.cpp.o -c /Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/src/spdlog.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/src/spdlog.cpp",
+  "output": "_deps/spdlog-build/CMakeFiles/spdlog.dir/src/spdlog.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-build",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o -c /Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/src/stdout_sinks.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/src/stdout_sinks.cpp",
+  "output": "_deps/spdlog-build/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-build",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/spdlog.dir/src/color_sinks.cpp.o -c /Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/src/color_sinks.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/src/color_sinks.cpp",
+  "output": "_deps/spdlog-build/CMakeFiles/spdlog.dir/src/color_sinks.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-build",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/spdlog.dir/src/file_sinks.cpp.o -c /Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/src/file_sinks.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/src/file_sinks.cpp",
+  "output": "_deps/spdlog-build/CMakeFiles/spdlog.dir/src/file_sinks.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-build",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/spdlog.dir/src/async.cpp.o -c /Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/src/async.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/src/async.cpp",
+  "output": "_deps/spdlog-build/CMakeFiles/spdlog.dir/src/async.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-build",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/spdlog.dir/src/cfg.cpp.o -c /Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/src/cfg.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/src/cfg.cpp",
+  "output": "_deps/spdlog-build/CMakeFiles/spdlog.dir/src/cfg.cpp.o"
+},
+{
+  "directory": "/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-build",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/spdlog.dir/src/bundled_fmtlib_format.cpp.o -c /Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/src/bundled_fmtlib_format.cpp",
+  "file": "/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/src/bundled_fmtlib_format.cpp",
+  "output": "_deps/spdlog-build/CMakeFiles/spdlog.dir/src/bundled_fmtlib_format.cpp.o"
+}
+]

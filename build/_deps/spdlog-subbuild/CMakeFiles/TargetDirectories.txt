@@ -1,0 +1,3 @@
+/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-subbuild/CMakeFiles/spdlog-populate.dir
+/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-subbuild/CMakeFiles/edit_cache.dir
+/Users/ikovic/Documents/sqlgui/build/_deps/spdlog-subbuild/CMakeFiles/rebuild_cache.dir
