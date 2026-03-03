@@ -1044,6 +1044,7 @@ CMakeFiles/sqlgui.dir/ui/MainWindow.cpp.o: \
   /Users/ikovic/Documents/sqlgui/ui/QueryEditorPane.hpp \
   /Users/ikovic/Documents/sqlgui/ui/ResultGridPanel.hpp \
   /Users/ikovic/Documents/sqlgui/ui/SchemaExplorerPanel.hpp \
+  /Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/imgui_internal.h \
   /Users/ikovic/Documents/sqlgui/build/_deps/imgui-src/misc/cpp/imgui_stdlib.h \
   /Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include/spdlog/logger.h \
   /Users/ikovic/Documents/sqlgui/build/_deps/spdlog-src/include/spdlog/common.h \

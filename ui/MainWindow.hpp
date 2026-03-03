@@ -39,6 +39,7 @@ private:
     void render_editor_window();
     void render_results_window();
     void render_plan_window();
+    void ensure_initial_dock_layout(ImGuiID dockspace_id);
     void render_delete_update_warning();
     void poll_query();
     void connect();
@@ -65,6 +66,7 @@ private:
     std::string sqlite_path_input_ {"data/comprehensive_test.db"};
     std::string pending_sql_;
     bool pending_explain_ {false};
+    bool dock_layout_initialized_ {false};
     bool open_dangerous_modal_ {false};
 };
 

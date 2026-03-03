@@ -5,6 +5,7 @@
 #include <utility>
 
 #include <imgui.h>
+#include <imgui_internal.h>
 #include <misc/cpp/imgui_stdlib.h>
 #include <spdlog/logger.h>
 
@@ -15,6 +16,16 @@
 
 namespace sqlgui::ui {
 
+namespace {
+
+constexpr const char* kConnectionWindow = "Connection";
+constexpr const char* kSchemaWindow = "Schema Explorer";
+constexpr const char* kEditorWindow = "Query Editor";
+constexpr const char* kResultsWindow = "Results";
+constexpr const char* kPlanWindow = "Execution Plan";
+
+}  // namespace
+
 MainWindow::MainWindow(std::shared_ptr<spdlog::logger> logger, ImFont* mono_font)
     : logger_(std::move(logger)),
       mono_font_(mono_font),
@@ -23,7 +34,8 @@ MainWindow::MainWindow(std::shared_ptr<spdlog::logger> logger, ImFont* mono_font
 void MainWindow::render() {
     poll_query();
 
-    ImGui::DockSpaceOverViewport(0, ImGui::GetMainViewport());
+    const ImGuiID dockspace_id = ImGui::DockSpaceOverViewport(0, ImGui::GetMainViewport());
+    ensure_initial_dock_layout(dockspace_id);
 
     render_connection_window();
     render_schema_window();
@@ -33,8 +45,42 @@ void MainWindow::render() {
     render_delete_update_warning();
 }
 
+void MainWindow::ensure_initial_dock_layout(ImGuiID dockspace_id) {
+    if (dock_layout_initialized_) {
+        return;
+    }
+
+    ImGuiDockNode* node = ImGui::DockBuilderGetNode(dockspace_id);
+    const bool has_existing_layout = node != nullptr
+        && (node->IsSplitNode() || node->Windows.Size > 0);
+    if (has_existing_layout) {
+        dock_layout_initialized_ = true;
+        return;
+    }
+
+    ImGuiViewport* viewport = ImGui::GetMainViewport();
+    ImGui::DockBuilderRemoveNode(dockspace_id);
+    ImGui::DockBuilderAddNode(dockspace_id, ImGuiDockNodeFlags_DockSpace);
+    ImGui::DockBuilderSetNodeSize(dockspace_id, viewport->WorkSize);
+
+    ImGuiID center_id = dockspace_id;
+    ImGuiID left_id = ImGui::DockBuilderSplitNode(center_id, ImGuiDir_Left, 0.22F, nullptr, &center_id);
+    ImGuiID right_id = ImGui::DockBuilderSplitNode(center_id, ImGuiDir_Right, 0.24F, nullptr, &center_id);
+    ImGuiID bottom_id = ImGui::DockBuilderSplitNode(center_id, ImGuiDir_Down, 0.34F, nullptr, &center_id);
+    ImGuiID connection_id = ImGui::DockBuilderSplitNode(left_id, ImGuiDir_Up, 0.28F, nullptr, &left_id);
+
+    ImGui::DockBuilderDockWindow(kConnectionWindow, connection_id);
+    ImGui::DockBuilderDockWindow(kSchemaWindow, left_id);
+    ImGui::DockBuilderDockWindow(kEditorWindow, center_id);
+    ImGui::DockBuilderDockWindow(kResultsWindow, bottom_id);
+    ImGui::DockBuilderDockWindow(kPlanWindow, right_id);
+    ImGui::DockBuilderFinish(dockspace_id);
+
+    dock_layout_initialized_ = true;
+}
+
 void MainWindow::render_connection_window() {
-    ImGui::Begin("Connection");
+    ImGui::Begin(kConnectionWindow);
 
     int database_kind = connection_config_.kind == sqlgui::core::DatabaseKind::SQLite ? 0 : 1;
     const char* kinds[] = {"SQLite", "PostgreSQL"};
@@ -111,13 +157,13 @@ void MainWindow::render_connection_window() {
 }
 
 void MainWindow::render_schema_window() {
-    ImGui::Begin("Schema Explorer");
+    ImGui::Begin(kSchemaWindow);
     schema_explorer_.render(schema_provider_.get());
     ImGui::End();
 }
 
 void MainWindow::render_editor_window() {
-    ImGui::Begin("Query Editor");
+    ImGui::Begin(kEditorWindow);
     const auto action = editor_.render(
         mono_font_,
         active_query_.has_value(),
@@ -142,13 +188,13 @@ void MainWindow::render_editor_window() {
 }
 
 void MainWindow::render_results_window() {
-    ImGui::Begin("Results");
+    ImGui::Begin(kResultsWindow);
     result_grid_.render(mono_font_);
     ImGui::End();
 }
 
 void MainWindow::render_plan_window() {
-    ImGui::Begin("Execution Plan");
+    ImGui::Begin(kPlanWindow);
     if (!explain_plan_.has_value()) {
         ImGui::TextDisabled("Run EXPLAIN on a PostgreSQL query to render the execution plan.");
     } else {
