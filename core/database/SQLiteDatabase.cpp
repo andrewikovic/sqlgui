@@ -7,6 +7,7 @@
 #include <functional>
 #include <memory>
 #include <mutex>
+#include <numeric>
 #include <optional>
 #include <sstream>
 #include <stop_token>
@@ -121,6 +122,60 @@ private:
     return row;
 }
 
+[[nodiscard]] std::vector<ColumnDefinition> read_columns(sqlite3_stmt* statement) {
+    std::vector<ColumnDefinition> columns;
+    const int column_count = sqlite3_column_count(statement);
+    columns.reserve(static_cast<std::size_t>(column_count));
+    for (int column = 0; column < column_count; ++column) {
+        const auto* name = sqlite3_column_name(statement, column);
+        const auto* declared_type = sqlite3_column_decltype(statement, column);
+        columns.push_back(ColumnDefinition {
+            .name = name != nullptr ? std::string(name) : "column_" + std::to_string(column),
+            .declared_type = declared_type != nullptr ? std::string(declared_type) : std::string {},
+            .nullable = true,
+        });
+    }
+    return columns;
+}
+
+[[nodiscard]] Expected<std::vector<ResultRow>, DatabaseError> read_all_rows(
+    sqlite3* handle,
+    sqlite3_stmt* statement,
+    std::stop_token stop_token) {
+    SQLiteProgressGuard progress_guard(handle, stop_token);
+    std::vector<ResultRow> rows;
+    int step_rc = SQLITE_OK;
+    while ((step_rc = sqlite3_step(statement)) == SQLITE_ROW) {
+        rows.push_back(read_row(statement));
+    }
+
+    if (step_rc == SQLITE_INTERRUPT || stop_token.stop_requested()) {
+        return make_unexpected(DatabaseError::cancelled());
+    }
+    if (step_rc != SQLITE_DONE) {
+        return make_unexpected(sqlite_error(handle, ErrorCategory::Query, "Statement execution failed"));
+    }
+
+    return rows;
+}
+
+[[nodiscard]] bool is_sqlite_pragma_statement(std::string_view sql) {
+    const std::string normalized = trim_sql(normalize_sql_for_analysis(sql));
+    return normalized.rfind("pragma ", 0) == 0 || normalized == "pragma";
+}
+
+[[nodiscard]] bool compare_cells(
+    const ResultCell& left,
+    const ResultCell& right,
+    SortDirection direction) {
+    if (left.is_null != right.is_null) {
+        return direction == SortDirection::Ascending ? !left.is_null : left.is_null;
+    }
+    return direction == SortDirection::Ascending
+        ? left.text < right.text
+        : left.text > right.text;
+}
+
 [[nodiscard]] Expected<void, DatabaseError> execute_no_result(sqlite3* handle, std::string_view sql, std::stop_token stop_token) {
     const std::string statement_text = normalize_statement_text(sql);
     sqlite3_stmt* raw_statement = nullptr;
@@ -181,17 +236,7 @@ public:
             if (rc != SQLITE_OK) {
                 return make_unexpected(sqlite_error(state->handle.get(), ErrorCategory::Query, "Failed to inspect result columns"));
             }
-            const int column_count = sqlite3_column_count(statement.get());
-            columns.reserve(static_cast<std::size_t>(column_count));
-            for (int column = 0; column < column_count; ++column) {
-                const auto* name = sqlite3_column_name(statement.get(), column);
-                const auto* declared_type = sqlite3_column_decltype(statement.get(), column);
-                columns.push_back(ColumnDefinition {
-                    .name = name != nullptr ? std::string(name) : "column_" + std::to_string(column),
-                    .declared_type = declared_type != nullptr ? std::string(declared_type) : std::string {},
-                    .nullable = true,
-                });
-            }
+            columns = read_columns(statement.get());
         }
 
         std::ostringstream count_sql;
@@ -289,6 +334,96 @@ private:
     std::vector<ColumnDefinition> columns_;
     std::uint64_t total_row_count_ {0};
 };
+
+class SQLiteMaterializedQueryCursor final : public QueryCursor {
+public:
+    SQLiteMaterializedQueryCursor(std::vector<ColumnDefinition> columns, std::vector<ResultRow> rows)
+        : columns_(std::move(columns)),
+          rows_(std::move(rows)) {}
+
+    [[nodiscard]] const std::vector<ColumnDefinition>& columns() const noexcept override {
+        return columns_;
+    }
+
+    [[nodiscard]] std::optional<std::uint64_t> total_row_count() const noexcept override {
+        return static_cast<std::uint64_t>(rows_.size());
+    }
+
+    [[nodiscard]] Expected<ResultPage, DatabaseError> fetch_page(
+        std::size_t offset,
+        std::size_t limit,
+        const std::optional<SortSpec>& sort,
+        std::stop_token stop_token) override {
+        if (stop_token.stop_requested()) {
+            return make_unexpected(DatabaseError::cancelled());
+        }
+
+        std::vector<std::size_t> order(rows_.size());
+        std::iota(order.begin(), order.end(), 0);
+        if (sort.has_value() && sort->column_index < columns_.size()) {
+            std::stable_sort(order.begin(), order.end(), [this, &sort](std::size_t left_index, std::size_t right_index) {
+                const auto& left_row = rows_[left_index];
+                const auto& right_row = rows_[right_index];
+                const bool left_missing = sort->column_index >= left_row.size();
+                const bool right_missing = sort->column_index >= right_row.size();
+                if (left_missing != right_missing) {
+                    return !left_missing;
+                }
+                if (left_missing) {
+                    return left_index < right_index;
+                }
+                return compare_cells(
+                    left_row[sort->column_index],
+                    right_row[sort->column_index],
+                    sort->direction);
+            });
+        }
+
+        ResultPage page;
+        page.offset = offset;
+        page.limit = limit;
+        page.total_row_count = static_cast<std::uint64_t>(rows_.size());
+
+        const std::size_t end = std::min(offset + limit, rows_.size());
+        for (std::size_t position = offset; position < end; ++position) {
+            page.rows.push_back(rows_[order[position]]);
+        }
+
+        page.has_more = end < rows_.size();
+        return page;
+    }
+
+private:
+    std::vector<ColumnDefinition> columns_;
+    std::vector<ResultRow> rows_;
+};
+
+[[nodiscard]] Expected<std::unique_ptr<QueryCursor>, DatabaseError> create_materialized_cursor(
+    sqlite3* handle,
+    std::string_view sql,
+    std::stop_token stop_token) {
+    sqlite3_stmt* raw_statement = nullptr;
+    const int rc = sqlite3_prepare_v3(
+        handle,
+        sql.data(),
+        static_cast<int>(sql.size()),
+        SQLITE_PREPARE_PERSISTENT,
+        &raw_statement,
+        nullptr);
+    SqliteStatement statement(raw_statement, &sqlite3_finalize);
+    if (rc != SQLITE_OK) {
+        return make_unexpected(sqlite_error(handle, ErrorCategory::Query, "Failed to prepare statement"));
+    }
+
+    auto columns = read_columns(statement.get());
+    auto rows = read_all_rows(handle, statement.get(), stop_token);
+    if (!rows) {
+        return make_unexpected(rows.error());
+    }
+
+    return std::unique_ptr<QueryCursor>(
+        new SQLiteMaterializedQueryCursor(std::move(columns), std::move(*rows)));
+}
 
 }  // namespace
 
@@ -448,7 +583,15 @@ Expected<QueryResult, DatabaseError> SQLiteDatabase::execute(
     }
 
     if (!row_query.empty()) {
-        auto cursor = SQLitePagedQueryCursor::create(state_, logger_, row_query, stop_token);
+        auto cursor = is_sqlite_pragma_statement(row_query)
+            ? create_materialized_cursor(state_->handle.get(), row_query, stop_token)
+            : SQLitePagedQueryCursor::create(state_, logger_, row_query, stop_token);
+        if (!cursor
+            && cursor.error().category == ErrorCategory::Query
+            && cursor.error().message == "Failed to count result rows") {
+            logger_->debug("Falling back to materialized SQLite cursor for uncountable row query");
+            cursor = create_materialized_cursor(state_->handle.get(), row_query, stop_token);
+        }
         if (!cursor) {
             return make_unexpected(cursor.error());
         }
